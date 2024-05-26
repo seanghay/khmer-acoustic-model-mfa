@@ -18,8 +18,13 @@ conda install -c conda-forge montreal-forced-aligner --yes
 ### 3. Download the data
 
 ```shell
-wget https://www.openslr.org/resources/42/km_kh_male.zip
+# audio dataset
+wget -O km_kh_male.zip https://www.openslr.org/resources/42/km_kh_male.zip
 
+# pronouncing dictionary
+wget -O lexicon.txt https://github.com/seanghay/khmer-acoustic-model-mfa/raw/main/lexicon.txt
+
+# uncompress
 unzip km_kh_male.zip
 ```
 
