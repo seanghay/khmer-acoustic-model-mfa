@@ -96,3 +96,12 @@ This will create `./sample_audio/audio.TextGrid`
 Preview on [Praat: doing phonetics by computer](https://www.fon.hum.uva.nl/praat/) 
 
 <img src="img/1.png" width=512>
+
+
+
+### References
+
+- [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/)
+- [OpenSLR 42](https://openslr.org/42/)
+- [google/language-resources](https://github.com/google/language-resources/blob/master/km/data/lexicon.tsv)
+- https://eleanorchodroff.com/tutorial/montreal-forced-aligner.html
