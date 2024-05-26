@@ -44,6 +44,7 @@ mfa train --clean --speaker_characters 8 km_kh_male/wavs lexicon.txt khm_model.z
 
 This will take quite some time. Once it's done, there will be `khm_model.zip` file which you can then use for forced alignment.
 
+[[Download Pretrained Model]](https://github.com/seanghay/khmer-acoustic-model-mfa/releases/download/1.0/khm_model.zip)
 
 ### 6. Forced Alignment
 
