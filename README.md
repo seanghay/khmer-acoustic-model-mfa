@@ -46,6 +46,22 @@ This will take quite some time. Once it's done, there will be `khm_model.zip` fi
 
 [[Download Pretrained Model]](https://github.com/seanghay/khmer-acoustic-model-mfa/releases/download/1.0/khm_model.zip)
 
+#### What is `--speaker_characters`?
+
+Each audio file name looks like this `khm_0308_0011865648`
+
+MFA requires speaker labels for speaker-adapted training (SAT), so basically `speaker_characters` argument is to tell MFA to slice and parse the file name (khm_0308_0011865648) 
+
+It looks like this in Python
+
+```python
+speaker_characters = 8
+file_name = "khm_0308_0011865648"
+speaker_id = file_name[0:speaker_characters]
+print(f"{speaker_id=}")
+# => speaker_id=khm_0308"
+```
+
 ### 6. Forced Alignment
 
 The output files will be in Praat TextGrid format.
