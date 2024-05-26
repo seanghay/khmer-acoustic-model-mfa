@@ -62,10 +62,31 @@ print(f"{speaker_id=}")
 # => speaker_id=khm_0308"
 ```
 
-### 6. Forced Alignment
+
+### 6. Train G2P Model
+
+The pronounciation dictionary `lexicon.txt` has a limited amount of words which will lead to out of vocabulary(OOV) error for missing words, so in order to be able to generate unseen words we have to train G2P model.
+
+```shell
+mfa train_g2p --phonetisaurus lexicon.txt khm_g2p.zip
+```
+
+[[Download G2P Model]](https://github.com/seanghay/khmer-acoustic-model-mfa/releases/download/1.0/khm_g2p.zip)
+
+### 7. Forced Alignment
 
 The output files will be in Praat TextGrid format.
 
 ```shell
 mfa align --clean --speaker_characters 8 km_kh_male/wavs lexicon.txt khm_model.zip outputs
 ```
+
+#### Align with sample audio
+
+For some reason, without `--beam 100` the program crashes.
+
+```shell
+mfa align --clean --g2p_model_path khm_g2p.zip sample_audio lexicon.txt khm_model.zip sample_audio --beam 100
+```
+
+This will create `./sample_audio/audio.TextGrid`
